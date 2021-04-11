@@ -1,7 +1,6 @@
-import { useMutation, useQuery } from '@apollo/client';
-import * as Schema from './schema';
+import { useQuery } from '@apollo/client';
+import  productQuery from './schema';
 
-export const contactusFormSubmit = (options) => useMutation(Schema.contactusFormSubmit, { ...options });
-export const getCmsBlocks = (variables) => useQuery(Schema.getCmsBlocks, { variables });
+const getProduct = () => useQuery(productQuery);
 
-export default { contactusFormSubmit, getCmsBlocks };
+export default { getProduct};

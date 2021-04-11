@@ -101,7 +101,7 @@ const Menu = (props) => {
 
     const generateLink = (cat) => {
         const link = cat.link ? getPath(cat.link) : `/${cat.url_path}`;
-        console.log(cat)
+        
         if (features.vesMenu.enabled) {
             if (cat.link_type === 'category_link') {
                 return ['/[...slug]', link];

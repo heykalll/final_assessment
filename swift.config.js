@@ -449,6 +449,10 @@ const modules = {
     error: {
         enabled: true,
     },
+    popular: {
+        enabled: true,
+        path: 'popular',
+    },
 };
 
 const nossrCache = [
