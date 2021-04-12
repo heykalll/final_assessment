@@ -5,7 +5,8 @@ import gqlService from '../../services/graphql';
 const Popular = (props) => {
     const { error, loading, data} = gqlService.getProduct();
     const {
-        pageConfig
+        pageConfig,
+        t
     } = props;
 
     const Config = {
@@ -18,6 +19,7 @@ const Popular = (props) => {
     return (
         <Layout pageConfig={pageConfig || Config} {...props}>
             <PopularPage
+            t={t}
             error={error}
             loading={loading}
             data={data}

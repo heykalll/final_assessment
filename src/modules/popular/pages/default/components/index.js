@@ -7,7 +7,7 @@ import useStyles from './style';
 const PopularPage = (props) => {
     const styles = useStyles();
     const {
-        data, loading, error,
+        data, loading, error, t
     } = props;
     
     if (loading) {
@@ -20,7 +20,7 @@ const PopularPage = (props) => {
         <>
             {/* eslint-disable-next-line react/no-danger */}
             <Typography variant="h5" type="bold" align="left" className={styles.pageTitles}>
-                Popular Page
+                {t('popular:description')}
             </Typography>
             <Container>
                 <div className="row">
